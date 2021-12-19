@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="style.css">
+    <title>Quote Generator</title>
+</head>
+<body>
+    
+    <main>
+        <div class="modes-container">
+            <i class="far fa-moon mode-icon" id="moon" onclick="changeToDark()"></i>
+            <i class="fas fa-sun mode-icon" id="sun" onclick="changeToLight()"></i>
+        </div>        
+        <h1>Quote Generator</h1>
+
+        
+
+        <section id="quoteContainer" style="display: flex;margin: 15px;">
+            <!-- Loader -->
+            
+            <img src="./blackquote.png" class="quoteTopImg quoteImg" alt="">
+            <!-- <img src="./blackquote.png" class="quoteImg" alt=""> -->
+            <div class="quote-loader">
+            <p id="quote"> 
+                Fecth a Quote
+            </p>
+            <author>Author Name</author>
+             <div class="lds-ring loader" id="loader"><div></div><div></div><div></div><div></div></div>                
+             <div style="    align-self: end;
+             margin: 0px 160px 0px 0px;">
+            <img src="./blackquote.png" class="quoteBottomImg quoteImg" style="width: 130px;
+            position: absolute;
+            margin: -40px 0 0px 48px;
+            transform: rotate(180deg);" alt=""></div>
+
+            </div>
+        </section>
+        <button type="button" id="generateQuote" onclick="fetchData()">Generate Quote</button>
+    </main>
+
+</body>
+<script src="./index.js"></script>
+</html>
